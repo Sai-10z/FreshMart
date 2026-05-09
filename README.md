@@ -84,7 +84,7 @@ Database stores user, product, and order data
 | Screenshot | Description |
 |------------|-------------|
 | ![Welcome Screen](Snapshots/welcome.png) | Landing page displaying FreshMart branding and introductory tagline |
-| ![Login Page](Snapshots/login.png) | Secure login interface with email/phone and password authentication |
+| ![Login Page](Snapshots/login.png) | Secure login interface where users/vendors authenticate using email/phone and password |
 
 ---
 
@@ -92,13 +92,13 @@ Database stores user, product, and order data
 
 | Screenshot | Description |
 |------------|-------------|
-| ![Customer Dashboard](Snapshots/customer-dashboard.png) | Customer dashboard showing categories, banners, and promotional offers |
+| ![Customer Dashboard](Snapshots/customer-dashboard.png) | Customer dashboard showing product categories, banners, and promotions |
 | ![Customer Fruits](Snapshots/customer-fruits.png) | Fruits section displaying product grid with pricing and Add to Cart option |
 | ![Customer Vegetables](Snapshots/customer-veg.png) | Vegetables section with searchable product listings and cart actions |
-| ![Customer Cart](Snapshots/cart.png) | Shopping cart view with item quantities, pricing, and update options |
+| ![Customer Cart](Snapshots/cart.png) | Shopping cart view with selected items, quantity controls, and price updates |
 | ![Checkout Page](Snapshots/checkout.png) | Checkout page with address selection, order summary, and payment options |
-| ![Order Success](Snapshots/order-success.png) | Order confirmation page displaying successful purchase and order ID |
-| ![Invoice](Snapshots/invoice.png) | Detailed invoice showing purchased items, quantities, and total billing amount |
+| ![Order Success](Snapshots/order-success.png) | Order confirmation page showing successful purchase and order ID |
+| ![Invoice](Snapshots/invoice.png) | Detailed invoice with purchased items, quantities, and total billing amount |
 
 ---
 
@@ -112,6 +112,9 @@ Database stores user, product, and order data
 | ![Revenue Overview](Snapshots/revenue.png) | Revenue analytics dashboard displaying monthly earnings trends |
 
 ---
+
+## 📁 Note
+All screenshots are stored in the `/Snapshots` directory of this repository.
 
 > 📁 All screenshots are stored in the `/screenshots` directory of this repository.
 
