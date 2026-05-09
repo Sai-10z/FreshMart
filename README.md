@@ -83,8 +83,8 @@ Database stores user, product, and order data
 
 | Screenshot | Description |
 |------------|-------------|
-| ![Welcome Screen](screenshots/welcome.png) | Landing page displaying FreshMart branding and introductory tagline |
-| ![Login Page](screenshots/login.png) | Secure login interface with email/phone and password authentication |
+| ![Welcome Screen](Snapshots/welcome.png) | Landing page displaying FreshMart branding and introductory tagline |
+| ![Login Page](Snapshots/login.png) | Secure login interface with email/phone and password authentication |
 
 ---
 
@@ -92,13 +92,13 @@ Database stores user, product, and order data
 
 | Screenshot | Description |
 |------------|-------------|
-| ![Customer Dashboard](screenshots/customer-dashboard.png) | Customer dashboard showing categories, banners, and promotional offers |
-| ![Customer Fruits](screenshots/customer-fruits.png) | Fruits section displaying product grid with pricing and Add to Cart option |
-| ![Customer Vegetables](screenshots/customer-veg.png) | Vegetables section with searchable product listings and cart actions |
-| ![Customer Cart](screenshots/cart.png) | Shopping cart view with item quantities, pricing, and update options |
-| ![Checkout Page](screenshots/checkout.png) | Checkout page with address selection, order summary, and payment options |
-| ![Order Success](screenshots/order-success.png) | Order confirmation page displaying successful purchase and order ID |
-| ![Invoice](screenshots/invoice.png) | Detailed invoice showing purchased items, quantities, and total billing amount |
+| ![Customer Dashboard](Snapshots/customer-dashboard.png) | Customer dashboard showing categories, banners, and promotional offers |
+| ![Customer Fruits](Snapshots/customer-fruits.png) | Fruits section displaying product grid with pricing and Add to Cart option |
+| ![Customer Vegetables](Snapshots/customer-veg.png) | Vegetables section with searchable product listings and cart actions |
+| ![Customer Cart](Snapshots/cart.png) | Shopping cart view with item quantities, pricing, and update options |
+| ![Checkout Page](Snapshots/checkout.png) | Checkout page with address selection, order summary, and payment options |
+| ![Order Success](Snapshots/order-success.png) | Order confirmation page displaying successful purchase and order ID |
+| ![Invoice](Snapshots/invoice.png) | Detailed invoice showing purchased items, quantities, and total billing amount |
 
 ---
 
@@ -106,10 +106,10 @@ Database stores user, product, and order data
 
 | Screenshot | Description |
 |------------|-------------|
-| ![Vendor Dashboard](screenshots/vendor-dashboard.png) | Vendor dashboard showing sales overview and key business metrics |
-| ![Vendor Products](screenshots/vendor-products.png) | Product management panel for adding, editing, and deleting items |
-| ![Vendor Orders](screenshots/vendor-orders.png) | Order management panel for tracking and updating order status |
-| ![Revenue Overview](screenshots/revenue.png) | Revenue analytics dashboard displaying monthly earnings trends |
+| ![Vendor Dashboard](Snapshots/vendor-dashboard.png) | Vendor dashboard showing sales overview and key business metrics |
+| ![Vendor Products](Snapshots/vendor-products.png) | Product management panel for adding, editing, and deleting items |
+| ![Vendor Orders](Snapshots/vendor-orders.png) | Order management panel for tracking and updating order status |
+| ![Revenue Overview](Snapshots/revenue.png) | Revenue analytics dashboard displaying monthly earnings trends |
 
 ---
 
