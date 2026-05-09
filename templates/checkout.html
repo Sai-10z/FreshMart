@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <a href="/cart/" class="btn btn-secondary mb-3">
+        ← Back to Cart
+    </a>
+
+    <div class="card shadow-sm p-4">
+
+        <h2 class="mb-4 text-success text-center">
+            Checkout
+        </h2>
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <!-- ACCOUNT INFO -->
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Account Username
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    value="{{ request.user.username }}"
+                    readonly
+                >
+
+                <small class="text-muted">
+                    Order will be linked to your logged-in account.
+                </small>
+
+            </div>
+
+            <hr class="my-4">
+
+            <!-- DELIVERY DETAILS -->
+            <h5 class="text-muted mb-3">
+                Delivery Details
+            </h5>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    name="full_name"
+                    class="form-control"
+                    value="{{ profile.full_name }}"
+                    placeholder="Enter full name"
+                    required
+                >
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Phone Number
+                </label>
+
+                <input
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    value="{{ profile.phone }}"
+                    placeholder="Enter phone number"
+                    required
+                >
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Delivery Address
+                </label>
+
+                <textarea
+                    name="address"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Enter full delivery address"
+                    required>{{ profile.address }}</textarea>
+
+            </div>
+
+            <!-- PAYMENT -->
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Payment Method
+                </label>
+
+                <select
+                    class="form-select"
+                    name="payment"
+                    required
+                >
+
+                    <option value="COD">
+                        Cash on Delivery
+                    </option>
+
+                    <option value="Razorpay">
+                        Razorpay / UPI / Card
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- BUTTON -->
+            <button
+                type="submit"
+                class="btn btn-success w-100 btn-lg"
+            >
+                Proceed to Payment
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,138 @@
+<!-- templates/vendor_revenue.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-4">
+
+<style>
+body{
+background:#f5f6fa;
+}
+
+.page-title{
+font-weight:700;
+color:#198754;
+}
+
+.box{
+background:#ffffff;
+border:none;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+padding:24px;
+margin-bottom:25px;
+}
+
+.stat-card{
+border:none;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.top-btn{
+border-radius:10px;
+font-weight:600;
+padding:6px 14px;
+}
+</style>
+
+
+<!-- HEADER -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<a href="/vendor-dashboard/" class="btn btn-secondary top-btn">
+← Back
+</a>
+
+<div class="flex-grow-1 text-center">
+<h2 class="page-title m-0">
+Revenue Analytics
+</h2>
+</div>
+
+<div style="width:80px;"></div>
+
+</div>
+
+
+
+<!-- TOP STATS -->
+<div class="row g-4 mb-4">
+
+<div class="col-md-6">
+<div class="card stat-card text-center p-4">
+<h3 class="text-success">
+₹{{ total_revenue }}
+</h3>
+<p class="mb-0">
+Total Revenue
+</p>
+</div>
+</div>
+
+</div>
+
+
+
+<!-- CHART -->
+<div class="box">
+
+<h4 class="mb-4 text-dark">
+Monthly Revenue Overview
+</h4>
+
+<canvas id="revenueChart" height="100"></canvas>
+
+</div>
+
+
+
+<!-- CHART JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{{ chart_labels|json_script:"chart-labels" }}
+{{ chart_values|json_script:"chart-values" }}
+
+<script>
+const labels = JSON.parse(
+document.getElementById('chart-labels').textContent
+);
+
+const values = JSON.parse(
+document.getElementById('chart-values').textContent
+);
+
+const ctx = document.getElementById('revenueChart');
+
+new Chart(ctx,{
+type:'bar',
+data:{
+labels:labels,
+datasets:[{
+label:'Revenue ₹',
+data:values,
+borderRadius:8,
+borderWidth:1
+}]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{
+display:true
+}
+},
+scales:{
+y:{
+beginAtZero:true
+}
+}
+}
+});
+</script>
+
+</div>
+
+{% endblock %}

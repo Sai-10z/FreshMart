@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <a href="/checkout/" class="btn btn-secondary mb-3">
+        ← Back to Checkout
+    </a>
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-success text-white">
+            <h3 class="mb-0">
+                Razorpay Payment
+            </h3>
+        </div>
+
+        <div class="card-body">
+
+            <h5 class="mb-3">
+                Hello {{ customer_name }}
+            </h5>
+
+            <p class="mb-2">
+                <strong>Phone:</strong>
+                {{ phone }}
+            </p>
+
+            <p class="mb-2">
+                <strong>Email:</strong>
+                {{ email }}
+            </p>
+
+            <p class="mb-3">
+                <strong>Total Amount:</strong>
+
+                <span class="text-success fw-bold fs-5">
+                    ₹{{ display_amount }}
+                </span>
+            </p>
+
+            <div class="alert alert-info">
+                Secure online payment powered by Razorpay
+            </div>
+
+            <button
+                id="rzp-button"
+                class="btn btn-success w-100 btn-lg"
+            >
+                Pay Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Razorpay Checkout Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+
+var options = {
+
+    "key": "{{ razorpay_key }}",
+
+    "amount": "{{ amount }}",
+
+    "currency": "INR",
+
+    "name": "FreshMart",
+
+    "description": "FreshMart Order Payment",
+
+    "image": "https://cdn-icons-png.flaticon.com/512/3081/3081559.png",
+
+    "order_id": "{{ razorpay_order_id }}",
+
+    "handler": function (response) {
+
+        window.location.href = "/razorpay-success/";
+
+    },
+
+    "prefill": {
+
+        "name": "{{ customer_name }}",
+
+        "email": "{{ email }}",
+
+        "contact": "{{ phone }}"
+
+    },
+
+    "theme": {
+
+        "color": "#198754"
+
+    }
+
+};
+
+var rzp1 = new Razorpay(options);
+
+document.getElementById('rzp-button').onclick = function(e) {
+
+    rzp1.open();
+
+    e.preventDefault();
+
+}
+
+</script>
+
+{% endblock %}

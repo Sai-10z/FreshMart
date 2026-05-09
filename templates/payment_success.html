@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5 text-center">
+
+<div class="card shadow-sm p-4">
+
+<h2 class="text-success mb-3">
+Payment Successful 🎉
+</h2>
+
+<p class="mb-3">
+Your order has been placed successfully.
+</p>
+
+<div class="alert alert-success">
+Thank you for shopping with FreshMart!
+</div>
+
+<div class="mt-4">
+
+<a href="/orders/" class="btn btn-primary me-2">
+View My Orders
+</a>
+
+<a href="/customer-dashboard/" class="btn btn-success">
+Continue Shopping
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

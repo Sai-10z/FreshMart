@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-4">
+
+<style>
+body{
+background:#f5f6fa;
+}
+
+.page-title{
+font-weight:700;
+color:#198754;
+}
+
+.top-btn{
+border-radius:10px;
+font-weight:600;
+padding:6px 14px;
+}
+
+.section-box{
+background:#ffffff;
+border:none;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+padding:24px;
+margin-bottom:30px;
+}
+
+.stat-card{
+border:none;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.table thead{
+background:#198754;
+color:#ffffff;
+}
+
+.table td,
+.table th{
+vertical-align:middle;
+}
+
+.table img {
+border-radius: 10px;
+background: #f8f9fa;
+padding: 5px;
+}
+
+</style>
+
+
+<!-- HEADER -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<a href="/vendor-dashboard/" class="btn btn-secondary top-btn">
+← Back
+</a>
+
+<div class="flex-grow-1 text-center">
+<h2 class="page-title m-0">
+Inventory Management
+</h2>
+</div>
+
+<a href="/add-product/" class="btn btn-success top-btn">
++ Add Product
+</a>
+
+</div>
+
+
+<!-- STATS -->
+<div class="section-box">
+
+<div class="row g-3">
+
+<div class="col-md-4">
+<div class="card stat-card text-center p-3">
+<h4>{{ total_products }}</h4>
+<small>Total Products</small>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card stat-card text-center p-3">
+<h4>{{ available_products }}</h4>
+<small>Available</small>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card stat-card text-center p-3">
+<h4>{{ unavailable_products }}</h4>
+<small>Hidden</small>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FRUITS PANEL -->
+<div class="section-box">
+
+<h4 class="text-success mb-3">Fruits Panel</h4>
+
+<div class="row g-3 mb-4">
+<div class="col-md-3">
+<div class="card stat-card text-center p-3">
+<h4>{{ total_fruits }}</h4>
+<small>Fruits</small>
+</div>
+</div>
+</div>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-hover">
+
+<thead>
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Price</th>
+<th>Status & Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for product in fruits %}
+<tr>
+
+<td style="width:120px; text-align:center;">
+
+<img 
+src="/media/products/{{ product.name|lower }}.jpg"
+onerror="this.src='/media/default.png';"
+style="height:80px; width:80px; object-fit:cover; border-radius:10px;">
+
+<div class="mt-2">
+{% if product.is_available %}
+<span class="badge bg-success">Available</span>
+{% else %}
+<span class="badge bg-danger">Hidden</span>
+{% endif %}
+</div>
+
+</td>
+
+<td>{{ product.name }}</td>
+<td>₹{{ product.price }}</td>
+
+<td>
+
+<div class="d-flex gap-2 justify-content-center flex-wrap">
+
+<a href="/toggle-product/{{ product.id }}/?next=/vendor-inventory/"
+class="btn btn-sm px-3 {% if product.is_available %}btn-warning{% else %}btn-success{% endif %}">
+{% if product.is_available %}Hide{% else %}Show{% endif %}
+</a>
+
+<a href="/edit-product/{{ product.id }}/?next=/vendor-inventory/"
+class="btn btn-sm btn-outline-primary px-3">
+Edit
+</a>
+
+<a href="/delete-product/{{ product.id }}/?next=/vendor-inventory/"
+class="btn btn-sm btn-outline-danger px-3"
+onclick="return confirm('Delete {{ product.name }} ?')">
+Delete
+</a>
+
+</div>
+
+</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- VEGETABLES PANEL -->
+<div class="section-box">
+
+<h4 class="text-primary mb-3">Vegetables Panel</h4>
+
+<div class="row g-3 mb-4">
+<div class="col-md-3">
+<div class="card stat-card text-center p-3">
+<h4>{{ total_vegetables }}</h4>
+<small>Vegetables</small>
+</div>
+</div>
+</div>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-hover">
+
+<thead>
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Price</th>
+<th>Status & Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for product in vegetables %}
+<tr>
+
+<td style="width:120px; text-align:center;">
+
+<img 
+src="/media/products/{{ product.name|lower }}.jpg"
+onerror="this.src='/media/default.png';"
+style="height:80px; width:80px; object-fit:cover; border-radius:10px;">
+
+<div class="mt-2">
+{% if product.is_available %}
+<span class="badge bg-success">Available</span>
+{% else %}
+<span class="badge bg-danger">Hidden</span>
+{% endif %}
+</div>
+
+</td>
+
+<td>{{ product.name }}</td>
+<td>₹{{ product.price }}</td>
+
+<td>
+
+<div class="d-flex gap-2 justify-content-center flex-wrap">
+
+<a href="/toggle-product/{{ product.id }}/?next=/vendor-inventory/"
+class="btn btn-sm px-3 {% if product.is_available %}btn-warning{% else %}btn-success{% endif %}">
+{% if product.is_available %}Hide{% else %}Show{% endif %}
+</a>
+
+<a href="/edit-product/{{ product.id }}/?next=/vendor-inventory/"
+class="btn btn-sm btn-outline-primary px-3">
+Edit
+</a>
+
+<a href="/delete-product/{{ product.id }}/?next=/vendor-inventory/"
+class="btn btn-sm btn-outline-danger px-3"
+onclick="return confirm('Delete {{ product.name }} ?')">
+Delete
+</a>
+
+</div>
+
+</td>
+
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

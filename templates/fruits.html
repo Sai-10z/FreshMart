@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+<!-- BACK BUTTON -->
+<a href="/customer-dashboard/" class="btn btn-secondary mb-3">
+← Back to Dashboard
+</a>
+
+<!-- TITLE -->
+<h2 class="mb-4 text-success text-center">
+Fresh Fruits
+</h2>
+
+<!-- SEARCH -->
+<form method="get" action="/fruits/" class="mb-4">
+<div class="input-group">
+
+<input
+type="text"
+name="q"
+class="form-control"
+placeholder="Search Fruits"
+value="{{ query }}">
+
+<button class="btn btn-success">
+Search
+</button>
+
+</div>
+</form>
+
+<!-- PRODUCTS -->
+<div class="row">
+
+{% for product in products %}
+
+<div class="col-md-3 mb-4">
+
+<div class="card h-100 shadow-sm text-center product-card">
+
+<!-- ✅ FIXED IMAGE -->
+<img
+src="/media/products/{{ product.name|lower }}.jpg"
+class="card-img-top"
+style="height:200px; object-fit:cover; border-radius:10px;">
+
+<div class="card-body">
+
+<h5 class="mt-2">{{ product.name }}</h5>
+
+<p class="fw-bold text-success">
+₹{{ product.price }} / kg
+</p>
+
+{% if product.id|stringformat:"s" in cart %}
+
+<button class="btn btn-success w-100 mb-2" disabled>
+Added
+</button>
+
+<form method="get" action="/cart/remove/{{ product.id }}/">
+<input type="hidden" name="next" value="/fruits/">
+
+<button type="submit" class="btn btn-danger w-100">
+Remove
+</button>
+</form>
+
+{% else %}
+
+<form method="get" action="/add-to-cart/{{ product.id }}/">
+<button type="submit" class="btn btn-primary w-100">
+Add to Cart
+</button>
+</form>
+
+{% endif %}
+
+</div>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<div class="col-12">
+<div class="alert alert-info text-center">
+No fruits available right now.
+</div>
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<!-- STYLE -->
+<style>
+.product-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+</style>
+
+{% endblock %}

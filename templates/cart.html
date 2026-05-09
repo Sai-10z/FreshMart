@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="/customer-dashboard/" class="btn btn-secondary mb-3">
+← Back to Dashboard
+</a>
+
+<h2 class="mb-4 text-warning">My Cart</h2>
+
+{% if cart_items %}
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-warning">
+<tr>
+<th>Product</th>
+<th>Weight</th>
+<th>Price</th>
+<th>Qty</th>
+<th>Total</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for item in cart_items %}
+
+<tr>
+
+<td>{{ item.product.name }}</td>
+
+<td>
+
+<form method="get"
+action="/cart/update-weight/{{ item.product.id }}/">
+
+<select
+name="weight"
+class="form-select form-select-sm"
+onchange="this.form.submit()">
+
+<option value="250g"
+{% if item.weight == '250g' %}selected{% endif %}>
+250 g
+</option>
+
+<option value="500g"
+{% if item.weight == '500g' %}selected{% endif %}>
+500 g
+</option>
+
+<option value="1kg"
+{% if item.weight == '1kg' %}selected{% endif %}>
+1 kg
+</option>
+
+<option value="1.5kg"
+{% if item.weight == '1.5kg' %}selected{% endif %}>
+1.5 kg
+</option>
+
+<option value="2kg"
+{% if item.weight == '2kg' %}selected{% endif %}>
+2 kg
+</option>
+
+<option value="2.5kg"
+{% if item.weight == '2.5kg' %}selected{% endif %}>
+2.5 kg
+</option>
+
+<option value="3kg"
+{% if item.weight == '3kg' %}selected{% endif %}>
+3 kg
+</option>
+
+</select>
+
+</form>
+
+</td>
+
+<td>₹{{ item.price }}</td>
+
+<td>
+
+<a href="/cart/decrease/{{ item.product.id }}/"
+class="btn btn-warning btn-sm">
+-
+</a>
+
+<span class="mx-2">
+{{ item.qty }}
+</span>
+
+<a href="/cart/increase/{{ item.product.id }}/"
+class="btn btn-success btn-sm">
++
+</a>
+
+</td>
+
+<td>₹{{ item.total }}</td>
+
+<td>
+
+<a href="/cart/remove/{{ item.product.id }}/"
+class="btn btn-danger btn-sm">
+Remove
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+<div class="text-end mb-3">
+
+<h4>
+Grand Total: ₹{{ grand_total }}
+</h4>
+
+</div>
+
+<a href="/checkout/" class="btn btn-success w-100">
+Proceed to Checkout
+</a>
+
+{% else %}
+
+<div class="alert alert-info">
+Your cart is empty.
+</div>
+
+{% endif %}
+
+{% endblock %}

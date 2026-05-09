@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-4">
+
+<style>
+body{
+background:#f5f6fa;
+}
+
+.page-title{
+font-weight:700;
+color:#198754;
+letter-spacing:0.5px;
+}
+
+.dashboard-card{
+border:none;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+overflow:hidden;
+height:100%;
+}
+
+.dashboard-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 28px rgba(0,0,0,0.12);
+}
+
+.dashboard-card img{
+height:160px;
+width:100%;
+object-fit:contain;
+padding:15px;
+background:#ffffff;
+}
+
+.dashboard-card .card-body{
+padding:18px;
+text-align:center;
+}
+
+.dashboard-card h5{
+font-weight:700;
+margin-bottom:14px;
+}
+
+.btn-custom{
+border-radius:10px;
+font-weight:600;
+padding:8px 14px;
+}
+
+.top-btn{
+border-radius:10px;
+padding:6px 14px;
+font-weight:600;
+}
+
+@media (max-width:768px){
+.dashboard-card img{
+height:130px;
+}
+}
+</style>
+
+
+<!-- HEADER -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+
+<div class="flex-grow-1 text-center">
+<h2 class="page-title m-0">
+Vendor Dashboard
+</h2>
+</div>
+
+<div style="width:80px;"></div>
+
+</div>
+
+
+
+<!-- 2 x 2 GRID -->
+<div class="row g-4 justify-content-center">
+
+<!-- CUSTOMERS -->
+<div class="col-md-6 col-lg-5">
+<div class="card dashboard-card">
+
+<img src="/media/dashboard/customers.jpg">
+
+<div class="card-body">
+<h5 class="text-primary">
+Customers
+</h5>
+
+<a href="/vendor-customers/"
+class="btn btn-primary w-100 btn-custom">
+View Customers
+</a>
+
+</div>
+</div>
+</div>
+
+
+
+<!-- ORDERS -->
+<div class="col-md-6 col-lg-5">
+<div class="card dashboard-card">
+
+<img src="/media/dashboard/orders.jpg">
+
+<div class="card-body">
+<h5 class="text-dark">
+Orders
+</h5>
+
+<a href="/vendor-orders/"
+class="btn btn-dark w-100 btn-custom">
+Manage Orders
+</a>
+
+</div>
+</div>
+</div>
+
+
+
+<!-- REVENUE -->
+<div class="col-md-6 col-lg-5">
+<div class="card dashboard-card">
+
+<img src="/media/dashboard/revenue.jpg">
+
+<div class="card-body">
+<h5 class="text-success">
+Revenue
+</h5>
+
+<a href="/vendor-revenue/"
+class="btn btn-success w-100 btn-custom">
+View Revenue
+</a>
+
+</div>
+</div>
+</div>
+
+
+
+<!-- INVENTORY -->
+<div class="col-md-6 col-lg-5">
+<div class="card dashboard-card">
+
+<img src="/media/dashboard/inventory.jpg">
+
+<div class="card-body">
+<h5 class="text-warning">
+Inventory
+</h5>
+
+<a href="/vendor-inventory/"
+class="btn btn-warning w-100 btn-custom">
+Manage Inventory
+</a>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

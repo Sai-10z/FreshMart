@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+.welcome-bg {
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                url('https://images.unsplash.com/photo-1542838132-92c53300491e');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 60px 20px;
+}
+
+.welcome-card {
+    max-width: 600px;
+    margin: auto;
+}
+</style>
+
+<div class="welcome-bg shadow">
+
+<div class="welcome-card text-center">
+
+    <!-- ✅ Dynamic Greeting -->
+    {% if user.is_authenticated %}
+        <h1 class="text-success mb-3">
+            Welcome {{ user.username }} 👋
+        </h1>
+    {% else %}
+        <h1 class="text-success mb-3">
+            Welcome to FreshMart 👋
+        </h1>
+    {% endif %}
+
+    <p class="text-muted mb-4">
+        Fresh fruits & vegetables delivered to your doorstep.
+    </p>
+
+    <!-- ✅ Smart Button Logic -->
+    {% if user.is_authenticated %}
+
+        {% if user.is_staff %}
+            <a href="/vendor-dashboard/" class="btn btn-success btn-lg px-4">
+                Go to Dashboard →
+            </a>
+        {% else %}
+            <a href="/customer-dashboard/" class="btn btn-success btn-lg px-4">
+                Explore →
+            </a>
+        {% endif %}
+
+    {% else %}
+
+        <!-- 👇 NOT login anymore -->
+        <a href="/home/" class="btn btn-success btn-lg px-4">
+            Explore FreshMart →
+        </a>
+
+    {% endif %}
+
+</div>
+
+</div>
+
+{% endblock %}

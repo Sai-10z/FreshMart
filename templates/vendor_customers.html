@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="/vendor-dashboard/" class="btn btn-secondary mb-3">
+← Back to Dashboard
+</a>
+
+<h2 class="mb-4 text-primary">
+Registered Customers
+</h2>
+
+{% if customers %}
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-primary">
+<tr>
+<th>ID</th>
+<th>Username</th>
+<th>Full Name</th>
+<th>Email</th>
+<th>Date Joined</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for customer in customers %}
+
+<tr>
+
+<td>#{{ customer.id }}</td>
+
+<td>{{ customer.username }}</td>
+
+<td>{{ customer.first_name }}</td>
+
+<td>{{ customer.email }}</td>
+
+<td>{{ customer.date_joined }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% else %}
+
+<div class="alert alert-info">
+No customers found.
+</div>
+
+{% endif %}
+
+{% endblock %}

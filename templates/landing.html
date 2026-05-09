@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="text-center py-5">
+
+<h1 class="text-success mb-3">
+Welcome to FreshMart
+</h1>
+
+<p class="mb-5">
+Fresh fruits & vegetables from your local vendor
+</p>
+
+<div class="row justify-content-center">
+
+<div class="col-md-5 mb-4">
+<div class="card shadow p-4 h-100 text-center">
+
+<h3 class="text-success">
+Vendor / Admin
+</h3>
+
+<p>
+Manage stock, customers and orders
+</p>
+
+<a href="/login/" class="btn btn-success">
+Vendor Login
+</a>
+
+</div>
+</div>
+
+<div class="col-md-5 mb-4">
+<div class="card shadow p-4 h-100 text-center">
+
+<h3 class="text-primary">
+Customer
+</h3>
+
+<p>
+Browse products and place orders
+</p>
+
+<a href="/login/" class="btn btn-primary">
+Customer Login
+</a>
+
+</div>
+</div>
+
+</div>
+
+<div class="mt-3">
+
+<a href="/signup/" class="btn btn-dark px-4">
+New Customer Signup
+</a>
+
+</div>
+
+</div>
+
+{% endblock %}
