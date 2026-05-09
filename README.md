@@ -75,26 +75,45 @@ Database stores user, product, and order data
 - Nginx used as reverse proxy for production
 - Static files served efficiently in production setup
 
-## 📸 Output / Screenshots
+# 📸 FreshMart - Application Screenshots
 
-<p align="center">
-  <img src="home-page.png" alt="Home Page" width="80%">
-</p>
+---
 
-<p align="center">
-  <img src="product-page.png" alt="Product Page" width="80%">
-</p>
+## 1. Index / Welcome + Login Page
 
-<p align="center">
-  <img src="cart-page.png" alt="Cart Page" width="80%">
-</p>
+| Screenshot | Description |
+|------------|-------------|
+| ![Welcome Screen](screenshots/welcome.png) | Landing page displaying FreshMart branding and introductory tagline |
+| ![Login Page](screenshots/login.png) | Secure login interface with email/phone and password authentication |
 
-<p align="center">
-  <img src="checkout-page.png" alt="Checkout Page" width="80%">
-</p>
+---
 
-**Note:**  
-These screenshots represent the core user flow of Fresh Mart — from browsing products to completing a purchase via Razorpay checkout.
+## 2. Customer Section
+
+| Screenshot | Description |
+|------------|-------------|
+| ![Customer Dashboard](screenshots/customer-dashboard.png) | Customer dashboard showing categories, banners, and promotional offers |
+| ![Customer Fruits](screenshots/customer-fruits.png) | Fruits section displaying product grid with pricing and Add to Cart option |
+| ![Customer Vegetables](screenshots/customer-veg.png) | Vegetables section with searchable product listings and cart actions |
+| ![Customer Cart](screenshots/cart.png) | Shopping cart view with item quantities, pricing, and update options |
+| ![Checkout Page](screenshots/checkout.png) | Checkout page with address selection, order summary, and payment options |
+| ![Order Success](screenshots/order-success.png) | Order confirmation page displaying successful purchase and order ID |
+| ![Invoice](screenshots/invoice.png) | Detailed invoice showing purchased items, quantities, and total billing amount |
+
+---
+
+## 3. Vendor Section
+
+| Screenshot | Description |
+|------------|-------------|
+| ![Vendor Dashboard](screenshots/vendor-dashboard.png) | Vendor dashboard showing sales overview and key business metrics |
+| ![Vendor Products](screenshots/vendor-products.png) | Product management panel for adding, editing, and deleting items |
+| ![Vendor Orders](screenshots/vendor-orders.png) | Order management panel for tracking and updating order status |
+| ![Revenue Overview](screenshots/revenue.png) | Revenue analytics dashboard displaying monthly earnings trends |
+
+---
+
+> 📁 All screenshots are stored in the `/screenshots` directory of this repository.
 
 ## 👨‍💻 Project Summary
 
