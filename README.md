@@ -127,4 +127,3 @@ This project highlights:
 - Production deployment on AWS using EC2, Nginx, and Gunicorn
 
 Overall, Fresh Mart reflects practical skills in building, deploying, and managing a scalable web application in a cloud environment.
-
