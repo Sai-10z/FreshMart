@@ -62,6 +62,7 @@ The project demonstrates production-style deployment using AWS EC2, Nginx, and G
 
 # ☁️ AWS Cloud Deployment
 
+```
 FreshMart is deployed on an AWS EC2 Ubuntu instance using a production-grade Django deployment setup.
 
 ## Production Deployment Stack
@@ -72,7 +73,7 @@ FreshMart is deployed on an AWS EC2 Ubuntu instance using a production-grade Dja
 - Static & Media File Handling
 - Security Group Configuration
 - Public IP Based Hosting
-
+```
 ---
 
 # 🔐 Security Features
@@ -124,9 +125,7 @@ FreshMart/
 | ![Customer Vegetables](Snapshots/customer-veg.png) | Vegetables category product listing page |
 | ![Shopping Cart](Snapshots/cart.png) | Dynamic cart system with quantity and weight management |
 | ![Checkout Page](Snapshots/checkout.png) | Checkout page with delivery and payment details |
-| ![Razorpay Payment](Snapshots/razorpay.png) | Razorpay secure online payment gateway |
 | ![Order Success](Snapshots/order-success.png) | Successful order confirmation page |
-| ![Customer Orders](Snapshots/customer-orders.png) | Customer order tracking with live status progress |
 | ![Invoice](Snapshots/invoice.png) | Generated PDF invoice for customer orders |
 
 ---
@@ -139,9 +138,6 @@ FreshMart/
 | ![Vendor Products](Snapshots/vendor-products.png) | Inventory and product management system |
 | ![Vendor Orders](Snapshots/vendor-orders.png) | Order processing and management panel |
 | ![Vendor Revenue](Snapshots/revenue.png) | Revenue analytics and earnings overview |
-| ![Vendor Customers](Snapshots/vendor-customers.png) | Customer management interface |
-
-> All screenshots used in this README are stored inside the `/Snapshots` directory.
 
 ---
 
