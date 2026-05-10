@@ -151,33 +151,19 @@ FreshMart/
 
 # ⚡ Installation & Setup
 
-# ⚡ Setup Instructions
+```bash
+git clone https://github.com/yourusername/freshmart.git && cd freshmart
 
-## Clone Repository
-git clone https://github.com/yourusername/freshmart.git  
-cd freshmart  
+python -m venv venv
+# Activate:
+# Windows: venv\Scripts\activate
+# Linux/Mac: source venv/bin/activate
 
-## Create Virtual Environment
-python -m venv venv  
-
-## Activate Environment
-# Windows  
-venv\Scripts\activate  
-
-# Linux/Mac  
-source venv/bin/activate  
-
-## Install Dependencies
-pip install -r requirements.txt  
-
-## Run Migrations
-python manage.py migrate  
-
-## Create Superuser
-python manage.py createsuperuser  
-
-## Run Server
-python manage.py runserver  
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
 
 ---
 
