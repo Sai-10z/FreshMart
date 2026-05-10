@@ -48,6 +48,7 @@ To address this, I developed a web-based system that allows vendors to digitally
 🗄️ Database Operations (SQLite / PostgreSQL)
         ↓
 ✅ Response Sent Back To Client
+```
 
 ---
 
