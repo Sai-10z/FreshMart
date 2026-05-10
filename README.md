@@ -30,63 +30,33 @@ The project demonstrates production-style deployment using AWS EC2, Nginx, and G
 
 # ✨ Core Features
 
-## 👤 Customer Features
+## 👤 Customer Module
+- User registration and login system  
+- Product browsing (fruits & vegetables)  
+- Cart management with quantity control  
+- Checkout with delivery details  
+- Razorpay payment integration  
+- Order tracking system  
+- Invoice generation  
+- Profile management  
 
-- User registration and authentication
-- Customer dashboard with category navigation
-- Browse fruits and vegetables separately
-- Search products dynamically
-- Add to cart / remove from cart
-- Quantity and weight management
-- Real-time cart total calculation
-- Checkout and delivery details form
-- Razorpay payment gateway integration
-- Order placement and confirmation
-- Order tracking with live status progress bar
-- Invoice generation and download
-- Profile management system
-- Responsive mobile-friendly UI
+## 🏪 Vendor Module
+- Product management (add/edit/delete)  
+- Inventory control system  
+- Order management dashboard  
+- Order status updates (Pending, Packed, Shipped, Delivered)  
+- Revenue tracking  
 
----
+## 💳 Payments
+- Razorpay payment gateway integration  
+- Secure payment verification  
+- COD support  
+- Order confirmation system  
 
-## 🏪 Vendor / Admin Features
-
-- Vendor dashboard with statistics overview
-- Product inventory management
-- Add / edit / delete products
-- Enable or disable product availability
-- Customer management panel
-- Active order tracking
-- Order status management:
-  - Pending
-  - Packed
-  - Shipped
-  - Delivered
-  - Cancelled
-- Revenue analytics dashboard
-- Monthly revenue visualization
-- Export order reports (CSV / PDF)
-- Invoice generation for vendors
-
----
-
-## 💳 Payment Integration
-
-- Integrated Razorpay payment gateway
-- Secure online transaction flow
-- Razorpay order creation using backend API
-- Payment verification flow
-- COD support
-- Payment success confirmation page
-
----
-
-## 📧 Email Features
-
-- Automatic order confirmation emails
-- Delivery completion email notifications
-- Invoice attachment support
-- Customer communication automation
+## 📧 Notifications
+- Order confirmation emails  
+- Delivery status updates  
+- Invoice email support  
 
 ---
 
@@ -107,12 +77,11 @@ FreshMart is deployed on an AWS EC2 Ubuntu instance using a production-grade Dja
 
 # 🔐 Security Features
 
-- Django authentication system
-- Protected customer/vendor routes
-- Role-based access handling
-- CSRF protection
-- Secure payment handling
-- Sensitive credentials excluded using `.gitignore`
+- Django authentication system  
+- CSRF protection  
+- Role-based access (Customer / Vendor)  
+- Secure payment handling  
+- Sensitive credentials excluded via environment variables  
 
 ---
 
@@ -182,66 +151,33 @@ FreshMart/
 
 # ⚡ Installation & Setup
 
+# ⚡ Setup Instructions
+
 ## Clone Repository
-
-```bash
-git clone https://github.com/yourusername/freshmart.git
-cd freshmart
-```
-
----
+git clone https://github.com/yourusername/freshmart.git  
+cd freshmart  
 
 ## Create Virtual Environment
+python -m venv venv  
 
-```bash
-python -m venv venv
-```
+## Activate Environment
+# Windows  
+venv\Scripts\activate  
 
-### Activate Virtual Environment
+# Linux/Mac  
+source venv/bin/activate  
 
-#### Windows
-
-```bash
-venv\Scripts\activate
-```
-
-#### Linux / Mac
-
-```bash
-source venv/bin/activate
-```
-
----
-
-## Install Requirements
-
-```bash
-pip install -r requirements.txt
-```
-
----
+## Install Dependencies
+pip install -r requirements.txt  
 
 ## Run Migrations
-
-```bash
-python manage.py migrate
-```
-
----
+python manage.py migrate  
 
 ## Create Superuser
+python manage.py createsuperuser  
 
-```bash
-python manage.py createsuperuser
-```
-
----
-
-## Start Development Server
-
-```bash
-python manage.py runserver
-```
+## Run Server
+python manage.py runserver  
 
 ---
 
@@ -281,38 +217,22 @@ __pycache__/
 
 # 🧠 Skills Demonstrated
 
-- Full Stack Web Development
-- Django Backend Development
-- Payment Gateway Integration
-- REST-style Request Handling
-- Authentication & Authorization
-- Cloud Deployment
-- Linux Server Management
-- Nginx Configuration
-- Gunicorn Setup
-- Database Operations
-- Inventory Management
-- Order Processing Systems
-- Responsive UI Design
-- AWS EC2 Deployment
-- Production Deployment Workflow
+- Django backend development  
+- Full-stack web application design  
+- Payment gateway integration (Razorpay)  
+- Database design & management  
+- AWS EC2 deployment  
+- Nginx & Gunicorn configuration  
+- Authentication & authorization systems  
+- Order & inventory management systems  
+- Production deployment workflow  
 
 ---
 
 # 👨‍💻 Project Summary
 
-FreshMart is a real-world inspired e-commerce platform developed to simulate an online grocery delivery system with both customer and vendor workflows.
-
-The project demonstrates practical experience in:
-
-- Building scalable Django web applications
-- Implementing secure payment gateways
-- Managing orders and inventory systems
-- Deploying production applications on AWS
-- Configuring Nginx and Gunicorn servers
-- Handling full-stack development workflows
-
-This project reflects strong hands-on skills in backend engineering, cloud deployment, and complete web application lifecycle management.
+FreshMart is a real-world inspired e-commerce platform designed to simulate an online grocery ordering system with customer and vendor workflows.
+It demonstrates practical experience in building, securing, and deploying a full-stack Django application on AWS using production-grade tools and architecture.
 
 ---
 
