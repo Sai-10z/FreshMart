@@ -25,16 +25,18 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
+# 🏗 Architecture & Request Flow
+
 <div align="center">
 
-<table width="100%" style="table-layout: fixed;">
+<table width="100%" style="table-layout: fixed; border-collapse: collapse;">
 <tr>
 
-<td width="50%" valign="top" align="center">
+<td width="50%" valign="top" style="border:1px solid #30363d; padding:20px;" align="center">
 
 ### 🏗 System Architecture
 
-<pre align="left" style="display:inline-block; text-align:left; min-width:320px; min-height:260px;">
+<pre style="text-align:left; display:inline-block; background:#0d1117; padding:18px; border-radius:8px; min-width:300px; min-height:260px;">
 Internet Client
       ↓
 Nginx
@@ -50,11 +52,11 @@ Database (SQLite / PostgreSQL)
 
 </td>
 
-<td width="50%" valign="top" align="center">
+<td width="50%" valign="top" style="border:1px solid #30363d; padding:20px;" align="center">
 
 ### ⚙️ Request Flow
 
-<pre align="left" style="display:inline-block; text-align:left; min-width:320px; min-height:260px;">
+<pre style="text-align:left; display:inline-block; background:#0d1117; padding:18px; border-radius:8px; min-width:300px; min-height:260px;">
 Client Request
       ↓
 Nginx Receives Traffic
