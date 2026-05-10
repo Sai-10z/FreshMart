@@ -156,8 +156,8 @@ git clone https://github.com/yourusername/freshmart.git && cd freshmart
 
 python -m venv venv
 # Activate:
-# Windows: venv\Scripts\activate
-# Linux/Mac: source venv/bin/activate
+For Windows: venv\Scripts\activate
+For Linux/Mac: source venv/bin/activate
 
 pip install -r requirements.txt
 python manage.py migrate
