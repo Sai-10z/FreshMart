@@ -1,4 +1,4 @@
-# <div>🌱 <span style="font-size:50px;">FreshMart</span></div>
+# <div>🌱 <span style="font-size:50px;">FreshMart – Online Grocery System</span></div>
 
 FreshMart is a Django-based full-stack e-commerce web application for online fruit and vegetable ordering.
 It includes separate customer and vendor modules with complete order lifecycle management, payment processing, inventory tracking, and invoice generation.
