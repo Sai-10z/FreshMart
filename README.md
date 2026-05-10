@@ -25,80 +25,66 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
-<table width="100%">
+<table width="100%" style="table-layout: fixed;">
 <tr>
 
 <td width="50%" valign="top">
 
-<div align="center">
+<div style="height: 100%;">
 
 ## 🏗 System Architecture
 
+```text
+Internet Client
+      │
+      ▼
+   Nginx
+(Reverse Proxy)
+      │
+      ▼
+  Gunicorn
+ (WSGI Server)
+      │
+      ▼
+Django FreshMart Application
+      │
+      ▼
+Database (SQLite / PostgreSQL)
+```
+
 </div>
+
+</td>
+
+<td width="50%" valign="top">
+
+<div style="height: 100%;">
+
+## ⚙️ Request Flow
 
 ```text
-+------------------------------+
-|       Internet Client        |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-|            Nginx             |
-|       (Reverse Proxy)        |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-|          Gunicorn            |
-|         (WSGI Server)        |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-|   Django FreshMart App       |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-| Database (SQLite/PostgreSQL) |
-+------------------------------+
-
-</td> <td width="50%" valign="top"> <div align="center">
+Client Request
+      ↓
+Nginx Receives Traffic
+      ↓
+Gunicorn Processes Django Requests
+      ↓
+Django Handles Business Logic
+(Authentication / Cart / Orders / Payments)
+      ↓
+Database Operations
+      ↓
+Response Sent Back To Client
+```
 
 </div>
 
-+------------------------------+
-|        Client Request        |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-|    Nginx Receives Traffic    |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-| Gunicorn Processes Requests  |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-| Django Handles Business Logic|
-| (Auth/Cart/Orders/Payments)  |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-|      Database Operations     |
-+------------------------------+
-               │
-               ▼
-+------------------------------+
-|   Response Sent To Client    |
-+------------------------------+
+</td>
 
-</td> </tr> </table>
-```
+</tr>
+</table>
+
+---
 
 # ✨ Core Features
 
