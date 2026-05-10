@@ -1,9 +1,8 @@
 # <div>🌱 <span style="font-size:50px;">FreshMart</span></div>
 
-FreshMart is a full-stack Django-based e-commerce web application designed for online fruit and vegetable ordering.  
-The platform provides a complete customer shopping experience along with a powerful vendor/admin management system for handling products, orders, inventory, payments, invoices, and revenue tracking.
-
-The project demonstrates real-world backend development, payment gateway integration, cloud deployment, and production server configuration using AWS EC2, Gunicorn, and Nginx.
+FreshMart is a Django-based full-stack e-commerce web application for online fruit and vegetable ordering.
+It includes separate customer and vendor modules with complete order lifecycle management, payment processing, inventory tracking, and invoice generation.
+The project demonstrates production-style deployment using AWS EC2, Nginx, and Gunicorn.
 
 ---
 
