@@ -62,10 +62,9 @@ The project demonstrates production-style deployment using AWS EC2, Nginx, and G
 
 # ☁️ AWS Cloud Deployment
 
-```
 FreshMart is deployed on an AWS EC2 Ubuntu instance using a production-grade Django deployment setup.
 
-## Production Deployment Stack
+### Production Deployment Stack
 
 - AWS EC2 (Ubuntu)
 - Gunicorn WSGI Server
@@ -73,7 +72,7 @@ FreshMart is deployed on an AWS EC2 Ubuntu instance using a production-grade Dja
 - Static & Media File Handling
 - Security Group Configuration
 - Public IP Based Hosting
-```
+
 ---
 
 # 🔐 Security Features
