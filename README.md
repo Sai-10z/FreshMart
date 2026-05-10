@@ -34,7 +34,19 @@ To address this, I developed a web-based system that allows vendors to digitally
 
 # 🏗 Architecture & Request Flow
 
-🌐 **Internet Client** → ⚡ **Nginx (Reverse Proxy)** → 🚀 **Gunicorn (WSGI Server)** → 🐍 **Django FreshMart Application** → 🔐 **Authentication • Cart • Orders • Payments** → 🗄️ **Database Operations (SQLite / PostgreSQL)** → ✅ **Response Sent Back To Client**
+🌐 Internet Client  
+↓  
+⚡ Nginx (Reverse Proxy)  
+↓  
+🚀 Gunicorn (WSGI Server)  
+↓  
+🐍 Django FreshMart Application  
+↓  
+🔐 Authentication • Cart • Orders • Payments  
+↓  
+🗄️ Database Operations (SQLite / PostgreSQL)  
+↓  
+✅ Response Sent Back To Client
 
 ---
 
