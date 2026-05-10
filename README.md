@@ -25,7 +25,7 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
-Internet Client  → Nginx (Reverse Proxy)  → Gunicorn (WSGI Server)  → Django FreshMart Application  → Authentication / Cart / Orders / Payments  → Database Operations (SQLite / PostgreSQL)  → Response Sent Back To Client
+🌐 **Internet Client** → ⚡ **Nginx (Reverse Proxy)** → 🚀 **Gunicorn (WSGI Server)** → 🐍 **Django FreshMart Application** → 🔐 **Authentication • Cart • Orders • Payments** → 🗄️ **Database Operations (SQLite / PostgreSQL)** → ✅ **Response Sent Back To Client**
 
 ---
 
