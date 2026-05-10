@@ -25,14 +25,14 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
-<table width="100%">
+<table width="100%" style="table-layout: fixed;">
 <tr>
 
 <td width="50%" valign="top">
 
 ### 🏗 System Architecture
 
-```text
+<pre>
 Internet Client
       ↓
 Nginx
@@ -44,7 +44,7 @@ Gunicorn
 Django FreshMart Application
       ↓
 Database (SQLite / PostgreSQL)
-```
+</pre>
 
 </td>
 
@@ -52,7 +52,7 @@ Database (SQLite / PostgreSQL)
 
 ### ⚙️ Request Flow
 
-```text
+<pre>
 Client Request
       ↓
 Nginx Receives Traffic
@@ -65,7 +65,7 @@ Django Handles Business Logic
 Database Operations
       ↓
 Response Sent Back To Client
-```
+</pre>
 
 </td>
 
