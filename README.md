@@ -25,47 +25,7 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
-<div align="center">
-
-```text
-           ┌───────────────────────────────┐
-           │        Internet Client        │
-           └───────────────────────────────┘
-                      │
-                      ▼
-           ┌───────────────────────────────┐
-           │    Nginx (Reverse Proxy)      │
-           └───────────────────────────────┘
-                      │
-                      ▼
-           ┌───────────────────────────────┐
-           │    Gunicorn (WSGI Server)     │
-           └───────────────────────────────┘
-                      │
-                      ▼
-           ┌───────────────────────────────┐
-           │ Django FreshMart Application  │
-           └───────────────────────────────┘
-                      │
-                      ▼
-           ┌───────────────────────────────┐
-           │ Authentication / Cart /       │
-           │      Orders / Payments        │
-           └───────────────────────────────┘
-                      │
-                      ▼
-           ┌───────────────────────────────┐
-           │ Database Operations           │
-           │ (SQLite / PostgreSQL)         │
-           └───────────────────────────────┘
-                      │
-                      ▼
-           ┌───────────────────────────────┐
-           │ Response Sent Back To Client  │
-           └───────────────────────────────┘
-```
-
-</div>
+Internet Client  → Nginx (Reverse Proxy)  → Gunicorn (WSGI Server)  → Django FreshMart Application  → Authentication / Cart / Orders / Payments  → Database Operations (SQLite / PostgreSQL)  → Response Sent Back To Client
 
 ---
 
