@@ -25,64 +25,27 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
-<table width="100%" style="table-layout: fixed;">
-<tr>
+<div align="center">
 
-<td width="50%" valign="top">
+<pre style="padding:20px; border:1px solid #30363d; border-radius:10px; display:inline-block; text-align:left;">
 
-<div style="height: 100%;">
-
-## 🏗 System Architecture
-
-```text
 Internet Client
-      │
-      ▼
-   Nginx
-(Reverse Proxy)
-      │
-      ▼
-  Gunicorn
- (WSGI Server)
-      │
-      ▼
+      ↓
+Nginx (Reverse Proxy)
+      ↓
+Gunicorn (WSGI Server)
+      ↓
 Django FreshMart Application
-      │
-      ▼
-Database (SQLite / PostgreSQL)
-```
-
-</div>
-
-</td>
-
-<td width="50%" valign="top">
-
-<div style="height: 100%;">
-
-## ⚙️ Request Flow
-
-```text
-Client Request
       ↓
-Nginx Receives Traffic
+Authentication / Cart / Orders / Payments
       ↓
-Gunicorn Processes Django Requests
-      ↓
-Django Handles Business Logic
-(Authentication / Cart / Orders / Payments)
-      ↓
-Database Operations
+Database Operations (SQLite / PostgreSQL)
       ↓
 Response Sent Back To Client
-```
+
+</pre>
 
 </div>
-
-</td>
-
-</tr>
-</table>
 
 ---
 
