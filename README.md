@@ -27,23 +27,27 @@ The project demonstrates real-world backend development, payment gateway integra
 
 <div align="center">
 
-<pre style="padding:20px; border:1px solid #30363d; border-radius:10px; display:inline-block; text-align:left;">
+<table>
+<tr><td align="center" style="border:1px solid #30363d; border-radius:8px; padding:10px;">Internet Client</td></tr>
+<tr><td align="center">↓</td></tr>
 
-Internet Client
-      ↓
-Nginx (Reverse Proxy)
-      ↓
-Gunicorn (WSGI Server)
-      ↓
-Django FreshMart Application
-      ↓
-Authentication / Cart / Orders / Payments
-      ↓
-Database Operations (SQLite / PostgreSQL)
-      ↓
-Response Sent Back To Client
+<tr><td align="center" style="border:1px solid #30363d; border-radius:8px; padding:10px;">Nginx (Reverse Proxy)</td></tr>
+<tr><td align="center">↓</td></tr>
 
-</pre>
+<tr><td align="center" style="border:1px solid #30363d; border-radius:8px; padding:10px;">Gunicorn (WSGI Server)</td></tr>
+<tr><td align="center">↓</td></tr>
+
+<tr><td align="center" style="border:1px solid #30363d; border-radius:8px; padding:10px;">Django FreshMart Application</td></tr>
+<tr><td align="center">↓</td></tr>
+
+<tr><td align="center" style="border:1px solid #30363d; border-radius:8px; padding:10px;">Authentication / Cart / Orders / Payments</td></tr>
+<tr><td align="center">↓</td></tr>
+
+<tr><td align="center" style="border:1px solid #30363d; border-radius:8px; padding:10px;">Database Operations (SQLite / PostgreSQL)</td></tr>
+<tr><td align="center">↓</td></tr>
+
+<tr><td align="center" style="border:1px solid #30363d; border-radius:8px; padding:10px;">Response Sent Back To Client</td></tr>
+</table>
 
 </div>
 
