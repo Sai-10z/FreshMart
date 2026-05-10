@@ -8,13 +8,11 @@ The project demonstrates production-style deployment using AWS EC2, Nginx, and G
 
 ## 💡 Project Motivation
 
-This project was built to solve a real-world problem observed in my locality. In my apartment, local fruit and vegetable vendors share daily product photos via WhatsApp, and customers place orders manually by selecting items from those images. This process is unstructured, difficult to track, and does not provide proper order history or revenue visibility for vendors.
+This project was built to solve a real-world issue in my locality, where fruit and vegetable vendors share daily product images via WhatsApp and customers place orders manually. This makes the process unstructured, hard to track, and lacks proper order history and revenue visibility for vendors.
 
 ## 🚀 Solution Approach
 
-To solve this, I developed a web-based system that allows vendors to list products digitally, manage availability (show/hide items), track orders, monitor revenue, and streamline the entire ordering process. Customers can browse products anytime, place orders easily, and track their order status in a structured way.
-
-This project is inspired by real-world hyperlocal grocery ordering workflows and aims to digitize small vendor operations.
+To address this, I developed a web-based system that allows vendors to digitally list products, control availability, track orders, and monitor revenue. Customers can browse products anytime, place orders easily, and track their order status in a structured way. This project is inspired by real-world hyperlocal grocery ordering workflows and aims to digitize small vendor operations.
 
 ---
 
