@@ -25,14 +25,14 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
-<table width="100%" style="table-layout: fixed;">
+<table width="100%">
 <tr>
 
 <td width="50%" valign="top">
 
-<div style="height: 100%;">
-
 ## 🏗 System Architecture
+
+<div align="center">
 
 ```text
 Internet Client
@@ -58,9 +58,9 @@ Database (SQLite / PostgreSQL)
 
 <td width="50%" valign="top">
 
-<div style="height: 100%;">
-
 ## ⚙️ Request Flow
+
+<div align="center">
 
 ```text
 Client Request
