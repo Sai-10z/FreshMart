@@ -65,6 +65,38 @@ Database (SQLite / PostgreSQL)
 ```text
 Client Request
       ↓
+Nginx Receives Traffic# 🏗 Architecture & Request Flow
+
+<table width="100%" style="table-layout: fixed;">
+<tr>
+
+<td width="50%" valign="top">
+
+## 🏗 System Architecture
+
+```text
+Internet Client
+      ↓
+Nginx
+(Reverse Proxy)
+      ↓
+Gunicorn
+(WSGI Server)
+      ↓
+Django FreshMart Application
+      ↓
+Database (SQLite / PostgreSQL)
+```
+
+</td>
+
+<td width="50%" valign="top">
+
+## ⚙️ Request Flow
+
+```text
+Client Request
+      ↓
 Nginx Receives Traffic
       ↓
 Gunicorn Processes Django Requests
@@ -76,8 +108,6 @@ Database Operations
       ↓
 Response Sent Back To Client
 ```
-
-</div>
 
 </td>
 
