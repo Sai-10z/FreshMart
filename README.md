@@ -236,7 +236,3 @@ FreshMart is a real-world inspired e-commerce platform designed to simulate an o
 It demonstrates practical experience in building, securing, and deploying a full-stack Django application on AWS using production-grade tools and architecture.
 
 ---
-
-# 📜 License
-
-This project is developed for educational and portfolio purposes.
