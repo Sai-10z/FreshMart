@@ -25,38 +25,44 @@ The project demonstrates real-world backend development, payment gateway integra
 
 # 🏗 Architecture & Request Flow
 
-# 🏗 Architecture & Request Flow
-
-<div align="center">
-
-<table width="100%" style="table-layout: fixed; border-collapse: collapse;">
+<table width="100%" style="table-layout: fixed;">
 <tr>
 
-<td width="50%" valign="top" style="border:1px solid #30363d; padding:20px;" align="center">
+<td width="50%" valign="top">
 
-### 🏗 System Architecture
+<div style="height: 100%;">
 
-<pre style="text-align:left; display:inline-block; background:#0d1117; padding:18px; border-radius:8px; min-width:300px; min-height:260px;">
+## 🏗 System Architecture
+
+```text
 Internet Client
-      ↓
-Nginx
+      │
+      ▼
+   Nginx
 (Reverse Proxy)
-      ↓
-Gunicorn
-(WSGI Server)
-      ↓
+      │
+      ▼
+  Gunicorn
+ (WSGI Server)
+      │
+      ▼
 Django FreshMart Application
-      ↓
+      │
+      ▼
 Database (SQLite / PostgreSQL)
-</pre>
+```
+
+</div>
 
 </td>
 
-<td width="50%" valign="top" style="border:1px solid #30363d; padding:20px;" align="center">
+<td width="50%" valign="top">
 
-### ⚙️ Request Flow
+<div style="height: 100%;">
 
-<pre style="text-align:left; display:inline-block; background:#0d1117; padding:18px; border-radius:8px; min-width:300px; min-height:260px;">
+## ⚙️ Request Flow
+
+```text
 Client Request
       ↓
 Nginx Receives Traffic
@@ -69,14 +75,14 @@ Django Handles Business Logic
 Database Operations
       ↓
 Response Sent Back To Client
-</pre>
+```
+
+</div>
 
 </td>
 
 </tr>
 </table>
-
-</div>
 
 ---
 
