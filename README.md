@@ -141,10 +141,6 @@ FreshMart/
 | ![Vendor Revenue](Snapshots/revenue.png) | Revenue analytics and earnings overview |
 | ![Vendor Customers](Snapshots/vendor-customers.png) | Customer management interface |
 
----
-
-# 📁 Screenshots Directory
-
 > All screenshots used in this README are stored inside the `/Snapshots` directory.
 
 ---
