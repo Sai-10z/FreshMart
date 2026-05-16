@@ -1,18 +1,8 @@
 # <div>🌱 <span style="font-size:50px;">FreshMart – Online Grocery System</span></div>
 
-FreshMart is a Django-based full-stack e-commerce web application for online fruit and vegetable ordering.
-It includes separate customer and vendor modules with complete order lifecycle management, payment processing, inventory tracking, and invoice generation.
-The project demonstrates production-style deployment using AWS EC2, Nginx, and Gunicorn.
+FreshMart is a Django-based full-stack e-commerce web application for online fruit and vegetable ordering. Inspired by real-world hyperlocal grocery workflows, the project was developed to digitize small vendor operations where orders are typically managed manually through messaging platforms like WhatsApp. 
 
----
-
-## 💭 Project Motivation
-
-This project was built to solve a real-world issue in my locality, where fruit and vegetable vendors share daily product images via WhatsApp and customers place orders manually. This makes the process unstructured, hard to track, and lacks proper order history and revenue visibility for vendors.
-
-## 💡 Solution Approach
-
-To address this, I developed a web-based system that allows vendors to digitally list products, control availability, track orders, and monitor revenue. Customers can browse products anytime, place orders easily, and track their order status in a structured way. This project is inspired by real-world hyperlocal grocery ordering workflows and aims to digitize small vendor operations.
+The platform enables vendors to manage products, inventory, orders, and revenue through a structured system, while customers can browse products, place orders, make payments, and track deliveries through an interactive web interface. It is deployed in a production-like environment using AWS EC2 with Nginx and Gunicorn.
 
 ---
 
@@ -84,28 +74,11 @@ To address this, I developed a web-based system that allows vendors to digitally
 
 ---
 
-# ☁️ AWS Cloud Deployment
-
-FreshMart is deployed on an AWS EC2 Ubuntu instance using a production-grade Django deployment setup.
-
-### Production Deployment Stack :
-
-- AWS EC2 (Ubuntu)
-- Gunicorn WSGI Server
-- Nginx Reverse Proxy
-- Static & Media File Handling
-- Security Group Configuration
-- Public IP Based Hosting
-
----
-
 # 🔐 Security Features
 
-- Django authentication system  
-- CSRF protection  
-- Role-based access (Customer / Vendor)  
-- Secure payment handling  
-- Sensitive credentials excluded via environment variables  
+- Django authentication with role-based access (Customer / Vendor)  
+- CSRF protection and secure payment handling  
+- Sensitive credentials managed via environment variables  
 
 ---
 
@@ -202,20 +175,6 @@ DEFAULT_FROM_EMAIL = "FreshMart <YOUR_EMAIL@gmail.com>"
 
 ---
 
-# 📦 Git Ignore
-
-Sensitive files excluded from GitHub:
-
-```text
-.env
-db.sqlite3
-media/
-venv/
-__pycache__/
-```
-
----
-
 # 🧠 Skills Demonstrated
 
 - Django backend development  
@@ -227,12 +186,5 @@ __pycache__/
 - Authentication & authorization systems  
 - Order & inventory management systems  
 - Production deployment workflow  
-
----
-
-# 👨‍💻 Project Summary
-
-FreshMart is a real-world inspired e-commerce platform designed to simulate an online grocery ordering system with customer and vendor workflows.
-It demonstrates practical experience in building, securing, and deploying a full-stack Django application on AWS using production-grade tools and architecture.
 
 ---
