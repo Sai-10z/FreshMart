@@ -70,9 +70,7 @@ The platform enables vendors to manage products, inventory, orders, and revenue 
 - Delivery status updates  
 - Invoice email support  
 
----
-
-# 🔐 Security Features
+#£ 5) 🔐 Security Features
 
 - Django authentication with role-based access (Customer / Vendor)  
 - CSRF protection and secure payment handling  
