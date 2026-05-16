@@ -99,7 +99,7 @@ FreshMart/
 
 # 📸 Application Screenshots
 
-# 1) Welcome / Authentication
+## 1) Welcome / Authentication
 
 | Screenshot | Description |
 |------------|-------------|
@@ -108,7 +108,7 @@ FreshMart/
 
 ---
 
-# 2) Customer Section
+## 2) Customer Section
 
 | Screenshot | Description |
 |------------|-------------|
@@ -122,7 +122,7 @@ FreshMart/
 
 ---
 
-# 3) Vendor Section
+## 3) Vendor Section
 
 | Screenshot | Description |
 |------------|-------------|
