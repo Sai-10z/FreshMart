@@ -42,7 +42,7 @@ The platform enables vendors to manage products, inventory, orders, and revenue 
 
 # ✨ Core Features
 
-## 👤 Customer Module
+## 1) 👤 Customer Module
 - User registration and login system  
 - Product browsing (fruits & vegetables)  
 - Cart management with quantity control  
@@ -52,20 +52,20 @@ The platform enables vendors to manage products, inventory, orders, and revenue 
 - Invoice generation  
 - Profile management  
 
-## 🏪 Vendor Module
+## 2) 🏪 Vendor Module
 - Product management (add/edit/delete)  
 - Inventory control system  
 - Order management dashboard  
 - Order status updates (Pending, Packed, Shipped, Delivered)  
 - Revenue tracking  
 
-## 💳 Payments
+## 3) 💳 Payments
 - Razorpay payment gateway integration  
 - Secure payment verification  
 - COD support  
 - Order confirmation system  
 
-## 📧 Notifications
+## 4) 📧 Notifications
 - Order confirmation emails  
 - Delivery status updates  
 - Invoice email support  
